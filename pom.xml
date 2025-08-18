@@ -26,6 +26,7 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+    <url>https://software.splatgames.de/products/aether/profiler</url>
 
     <developers>
         <developer>
@@ -44,6 +45,14 @@
         <name>Splatgames.de Software</name>
         <url>https://software.splatgames.de/</url>
     </organization>
+
+
+    <scm>
+        <connection>scm:git:https://github.com/aether-framework/aether-profiler.git</connection>
+        <developerConnection>scm:git:git@github.com:aether-framework/aether-profiler.git</developerConnection>
+        <url>https://github.com/aether-framework/aether-profiler</url>
+        <tag>HEAD</tag>
+    </scm>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
