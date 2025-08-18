@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>de.splatgames.aether</groupId>
+    <artifactId>aether-profiler</artifactId>
+    <version>1.0.0</version>
+
+    <name>Aether Profiler</name>
+    <packaging>jar</packaging>
+
+    <description>
+        Aether Profiler is a Java library designed to provide profiling capabilities for applications using the Aether
+        library.
+        It allows developers to monitor and analyze the performance of their applications, helping to identify
+        bottlenecks and optimize resource usage.
+        This library is particularly useful for applications that require dependency resolution and management, such as
+        Maven-based projects.
+    </description>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/license/mit/</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Erik Pförtner</name>
+            <email>splatcrafter@splatgames.de</email>
+            <organization>Splatgames.de Software</organization>
+            <organizationUrl>https://software.splatgames.de/</organizationUrl>
+            <roles>
+                <role>Project Manager</role>
+                <role>Head of Development</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <organization>
+        <name>Splatgames.de Software</name>
+        <url>https://software.splatgames.de/</url>
+    </organization>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <org.jetbrains.annotations.version>24.0.0</org.jetbrains.annotations.version>
+        <org.slf4j.version>2.0.16</org.slf4j.version>
+        <org.junit.jupiter.version>5.11.4</org.junit.jupiter.version>
+        <org.assertj.version>3.27.3</org.assertj.version>
+        <org.mockito.version>5.14.2</org.mockito.version>
+        <org.apache.maven.plugins.maven-source-plugin.version>3.3.1
+        </org.apache.maven.plugins.maven-source-plugin.version>
+        <org.apache.maven.plugins.maven-javadoc-plugin.version>3.10.1
+        </org.apache.maven.plugins.maven-javadoc-plugin.version>
+        <org.apache.maven.plugins.maven-site-plugin.version>3.20.0</org.apache.maven.plugins.maven-site-plugin.version>
+        <org.apache.maven.plugins.maven-gpg-plugin.version>3.2.6</org.apache.maven.plugins.maven-gpg-plugin.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${org.apache.maven.plugins.maven-source-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${org.apache.maven.plugins.maven-javadoc-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <failOnError>false</failOnError>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>${org.apache.maven.plugins.maven-site-plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>${org.apache.maven.plugins.maven-gpg-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>${org.jetbrains.annotations.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${org.slf4j.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <!-- Test Dependencies -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${org.junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${org.assertj.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${org.mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- slf4j simple logger for testing -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${org.slf4j.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </reporting>
+</project>
