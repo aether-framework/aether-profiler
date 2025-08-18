@@ -6,7 +6,7 @@
 
     <groupId>de.splatgames.aether</groupId>
     <artifactId>aether-profiler</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 
     <name>Aether Profiler</name>
     <packaging>jar</packaging>

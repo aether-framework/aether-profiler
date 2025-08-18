@@ -4,9 +4,10 @@
 
 We provide security updates for the following versions:
 
-| Version | Supported |
-|---------|------------|
-| 1.0.x   | ✅ Active Support |
+| Version | Supported             |
+|---------|-----------------------|
+| 1.1.x   | ✅ Active Support      |
+| 1.0.x   | ✅ Active Support      |
 | 0.x.x   | ❌ No longer supported |
 
 If you are using an older version, we **strongly** recommend upgrading to the latest stable release.

@@ -1,6 +1,6 @@
 ![License](https://img.shields.io/badge/license-MIT-red) 
 ![Maven Central](https://img.shields.io/maven-central/v/de.splatgames.aether/aether-profiler)
-![Version](https://img.shields.io/badge/version-1.0.0-green)
+![Version](https://img.shields.io/badge/version-1.1.0-green)
 
 # Aether Profiler 🚀
 
@@ -28,7 +28,7 @@ Aether Profiler is available via **Maven** and **Gradle**.
 <dependency>
     <groupId>de.splatgames.aether</groupId>
     <artifactId>aether-profiler</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 </dependency>
 ```
 
@@ -36,7 +36,7 @@ Aether Profiler is available via **Maven** and **Gradle**.
 
 ```groovy
 dependencies {
-    implementation 'de.splatgames.aether:aether-profiler:1.0.0'
+    implementation 'de.splatgames.aether:aether-profiler:1.1.0'
 }
 ```
 
@@ -47,7 +47,7 @@ dependencies {
 
 ## 📢 Latest Release
 
-- 🚀 **Version:** `1.0.0`
+- 🚀 **Version:** `1.1.0`
 - 📅 **Release Date:** `August 18, 2025`
 - 📦 **Available on**:
   [![Maven Central](https://img.shields.io/maven-central/v/de.splatgames.aether/aether-profiler)](https://search.maven.org/artifact/de.splatgames.aether/aether-profiler)
