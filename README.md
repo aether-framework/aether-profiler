@@ -8,6 +8,21 @@ Aether Profiler is a powerful profiling library designed to help developers moni
 their applications. It provides a comprehensive set of tools for tracking execution time, memory usage, and other
 critical performance metrics.
 
+> [!CAUTION]
+> ## ❌ Project Discontinued
+>
+> This repository is no longer maintained due to structural changes within **Splatgames.de Software**.
+>
+> The project in its current form is considered deprecated.
+>
+> It may either:
+> - be re-released in a redesigned and structurally aligned version, or  
+> - remain permanently abandoned.
+>
+> No updates, fixes, or support will be provided.
+>
+> Use at your own risk.
+
 ---
 
 ## ✨ Features
